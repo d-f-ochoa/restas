@@ -1,0 +1,57 @@
+{
+  "short_name": "Restas",
+  "name": "Juego de restas",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/sticker-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/sticker-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/sticker-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/sticker-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/sticker-mono-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#1c274c",
+  "background_color": "#1c274c",
+
+  "screenshots": [
+    {
+      "src": "screenshots/desktop.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Versión escritorio"
+    },
+    {
+      "src": "screenshots/mobile.webp",
+      "sizes": "720x1280",
+      "type": "image/webp",
+      "label": "Versión móvil"
+    }
+  ]
+}

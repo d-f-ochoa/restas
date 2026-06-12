@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+}
+
+#splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d53c53;
+}
+
+#splash img {
+  width: 60%;
+  height: auto;
+}
+
+#main {
+  background-color: #ffbbc8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10%;
+  padding: 16px;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  /*  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 16 / 9;*/
+}
+
+#panel-izqdo {
+  position: relative;
+  width: 50%;
+}
+
+#panel-dcho {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 32px;
+}
+
+#casa-resta {
+  background-color: #fffdf0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 30px;
+
+  /*
+  position: absolute;
+  width: 80%;
+  margin: 0 10% 0 10%;
+  */
+}
+
+#problema {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: 1/1;
+}
+
+#respuesta {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+}
+
+.btn-comprobar {
+  display: inline-block;
+  padding: 16px 16px;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #ffcc00; /* Amarillo vibrante */
+  border: none;
+  border-radius: 15px;
+  /* Sombra sólida para efecto 3D */
+  box-shadow: 0 8px 0 #cca300;
+  cursor: pointer;
+  transition: all 0.1s;
+  user-select: none;
+}
+
+/* Efecto Hover (Brillo suave) */
+.btn-comprobar:hover {
+  background-color: #ffd633;
+}
+
+/* EFECTO "PULSADO" (Fundamental para feedback de juego) */
+.btn-comprobar:active {
+  box-shadow: 0 2px 0 #cca300;
+  transform: translateY(6px); /* El botón se "hunde" */
+}
+
+.btn-comprobar:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Brillo interno opcional */
+.btn-comprobar span {
+  position: relative;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#problema {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: 1/1;
+}
+
+#mensaje {
+  text-align: center;
+  background-color: #fffdf0;
+  padding: 10px;
+  color: black;
+  border-radius: 20px;
+}
+
+#respuesta {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#contenedor-inputs {
+  position: absolute;
+  left: 19.3%;
+  top: 80%;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  column-gap: 0.9%;
+
+  pointer-events: none;
+}
+
+#contenedor-inputs:has(> :nth-child(3):last-child) {
+  left: 26.5%;
+}
+
+#contenedor-inputs:has(> :nth-child(2):last-child) {
+  left: 33.5%;
+}
+
+.input-digito {
+  width: 12.5%;
+  aspect-ratio: 2 / 3;
+
+  text-align: center;
+  font-size: 6cqi;
+  font-family: "Comic Neue", cursive;
+
+  background: white;
+  border: 2px solid #7a96d4;
+  border-radius: 8px;
+  color: #444;
+  outline: none;
+  transition: all 0.2s;
+
+  pointer-events: auto;
+}
+
+.input-digito.oculto {
+  opacity: 0;
+}
+
+.input-digito:focus {
+  border-color: #ffcc00; /* Color llamativo para el niño */
+  background: #fffdf0;
+  transform: scale(1.05); /* Efecto de "pop" al seleccionar */
+}
+
+.input-digito:disabled {
+  opacity: 0.5;
+}
+
+/*
+#companion {
+  height: 150px;
+  bottom: 16px;
+  right: 16px;
+}*/
+
+#companion {
+  position: absolute;
+  height: 200px;
+  aspect-ratio: 1 / 1;
+  bottom: 16px;
+  left: 16px;
+}
+
+#settings {
+  background-color: #ffbbc8;
+}
+
+#opciones {
+  background-color: #ffbbc8;
+}
+
+.btn-circular {
+  position: absolute;
+}
+
+#btn-settings {
+  bottom: 20px;
+  right: 20px;
+}
+
+#btn-back {
+  bottom: 20px;
+  left: 20px;
+}
+
+.btn-circular {
+  /* Dimensiones fijas para el círculo */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  /* Centrado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Estilo */
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  color: #374151;
+
+  /* Sombra suave */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.btn-circular:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
